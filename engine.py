@@ -589,6 +589,13 @@ def write_daily(outdir, run, now_cut, prev_cut, pools, res, snap, logs, moves, d
     perf = sorted(((game_score(x), r, x) for r in allp for x in logs.get(r['pid'], {}).values() if prev_cut < x['date'] <= now_cut), key=lambda t: -t[0])
     perf_l = [f"{i}. {r['name']} ({G(r['g'])}, {r['school']}) {x['at']} {x['opp']} {x['res']}: {int(x['PTS'])} pts, {int(x['REB'])} reb, {int(x['AST'])} ast, "
               f"{int(x['STL'])} stl, {int(x['BLK'])} blk, {x['fgm']}-{x['fga']} FG, {int(x['MIN'])} min" for i, (_, r, x) in enumerate(perf[:10], 1)]
+    njs = sorted(((x['PTS'], game_score(x), r, x) for r in allp if 'NJ' in r['states'] for x in logs.get(r['pid'], {}).values() if prev_cut < x['date'] <= now_cut),
+                 key=lambda t: (-t[0], -t[1]))
+    nj_l = [f"{i}. {r['name']} ({G(r['g'])}, {r['school']}) {x['at']} {x['opp']} {x['res']}: {int(x['PTS'])} pts ({x['fgm']}-{x['fga']} FG), {int(x['REB'])} reb, {int(x['AST'])} ast, "
+            f"{int(x['MIN'])} min; season {snap['now'][r['pid']]['PTS'] if snap['now'][r['pid']] else '-'} ppg"
+            for i, (_, _, r, x) in enumerate([t for t in njs if t[2]['g'] == 'M'][:5] + [t for t in njs if t[2]['g'] == 'W'][:5], 1)]
+    nj_up = [m for m in moves if m[4] > 0 and 'NJ' in m[1]['states']][:10]
+    nj_dn = sorted([m for m in moves if m[4] < 0 and 'NJ' in m[1]['states']], key=lambda m: m[4])[:10]
     disc = lambda st: [f"{d[1]} ({d[4][0]}, {d[2]}, {d[6]}) - born {d[8]}; est. JSG {d[13]}; {d[18]} priority" for d in disc_rows if st in d[7]]
     mm = sorted([r for r in allp if not r['hm'] and res['now'][r['pid']]['dir'] == 'Transfer Up candidate' and res['now'][r['pid']]['prod'] >= 80],
                 key=lambda r: -res['now'][r['pid']]['jsg'])[:10]
@@ -603,12 +610,14 @@ def write_daily(outdir, run, now_cut, prev_cut, pools, res, snap, logs, moves, d
            f'<p><b>JSG Daily Regional Report - {run:%a %b %d, %Y}</b><br>Games {prev_cut + dt.timedelta(days=1):%b %d}-{now_cut:%b %d}: {nplayed} tracked NJ/NY/PA players played. '
            f'Ranks are within gender. <a href="{SHEET_URL}">Open the database</a></p>']
     if promos: out.append(f"<p>Promoted to the master database: {', '.join(f'{a} {b} ({c})' for a, b, c in promos)}.</p>")
-    out += [sec('1. Top 10 risers', mv(risers)), sec('2. Top 10 fallers', mv(fallers)), sec('3. Best individual performances', perf_l)]
+    out += [sec('1. Top 10 risers', mv(risers)), sec('2. Top 10 fallers', mv(fallers)), sec('3. Best individual performances', perf_l),
+            sec('4. NJ players - top scorers', nj_l, 'Most points by NJ-tied players in the games above (top 5 men, then top 5 women).'),
+            sec('5. NJ players - top risers', mv(nj_up)), sec('6. NJ players - top fallers', mv(nj_dn))]
     for i, st in enumerate(('NJ', 'PA', 'NY')):
-        out.append(sec(f'{4 + i}. New {st} prospects (pending your review in the Discovery tab)', disc(st)))
-    out += [sec('7. Mid-major players showing high-major potential', mm_l),
-            sec('8. High-priority representation opportunities', rep_l, 'JSG 70+ with no representation recorded in the sheet - verify before outreach.'),
-            f'<p><b style="color:#1F3864">9. Google Sheet</b><br><a href="{SHEET_URL}">{SHEET_URL}</a></p>',
+        out.append(sec(f'{7 + i}. New {st} prospects (pending your review in the Discovery tab)', disc(st)))
+    out += [sec('10. Mid-major players showing high-major potential', mm_l),
+            sec('11. High-priority representation opportunities', rep_l, 'JSG 70+ with no representation recorded in the sheet - verify before outreach.'),
+            f'<p><b style="color:#1F3864">12. Google Sheet</b><br><a href="{SHEET_URL}">{SHEET_URL}</a></p>',
             '<p style="font-size:11px;color:#666">Automated from ESPN game logs and box scores. Follow NCAA, state NIL and school compliance rules before outreach.</p></div>']
     open(os.path.join(outdir, 'email.html'), 'w').write(''.join(out))
     open(os.path.join(outdir, 'email_subject.txt'), 'w').write(f'JSG Daily Regional Report - {run:%b %d, %Y}')
