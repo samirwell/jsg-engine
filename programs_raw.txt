@@ -1,0 +1,363 @@
+Abilene Christian|United Athletic
+Air Force|Mountain West
+Akron|Mid-American
+Alabama|Southeastern
+Alabama A&M|Southwestern
+Alabama State|Southwestern
+Albany|America East
+Alcorn State|Southwestern
+American|Patriot League
+Appalachian State|Sun Belt
+Arizona|Big 12
+Arizona State|Big 12
+Arkansas|Southeastern
+Arkansas–Pine Bluff|Southwestern
+Arkansas State|Sun Belt
+Army|Patriot League
+Auburn|Southeastern
+Austin Peay|United Athletic
+Ball State|Mid-American
+Baylor|Big 12
+Bellarmine|Atlantic Sun
+Belmont|Missouri Valley
+Bethune–Cookman|Southwestern
+Binghamton|America East
+Boise State|Pac-12
+Boston College|Atlantic Coast
+Boston University|Patriot League
+Bowling Green|Mid-American
+Bradley|Missouri Valley
+Brown|Ivy League
+Bryant|America East
+Bucknell|Patriot League
+Buffalo|Mid-American
+Butler|Big East
+BYU|Big 12
+Cal Poly|Big West
+Cal State Bakersfield|Big West
+Cal State Fullerton|Big West
+Cal State Northridge|Big West
+California|Atlantic Coast
+California Baptist|Big West
+Campbell|Coastal
+Canisius|Metro
+Central Arkansas|United Athletic
+Central Connecticut|Northeast
+Central Michigan|Mid-American
+Charleston|Coastal
+Charleston Southern|Big South
+Charlotte|American
+Chattanooga|Southern
+Chicago State|Northeast
+Cincinnati|Big 12
+Clemson|Atlantic Coast
+Cleveland State|Horizon League
+Coastal Carolina|Sun Belt
+Colgate|Patriot League
+Colorado|Big 12
+Colorado State|Pac-12
+Columbia|Ivy League
+Coppin State|Mid-Eastern
+Cornell|Ivy League
+Creighton|Big East
+Dartmouth|Ivy League
+Davidson|Atlantic 10
+Dayton|Atlantic 10
+Delaware|Conference USA
+Delaware State|Mid-Eastern
+Denver|West Coast
+DePaul|Big East
+Detroit Mercy|Horizon League
+Drake|Missouri Valley
+Drexel|Coastal
+Duke|Atlantic Coast
+Duquesne|Atlantic 10
+East Carolina|American
+East Tennessee State|Southern
+East Texas A&M|Southland
+Eastern Illinois|Ohio Valley
+Eastern Kentucky|United Athletic
+Eastern Michigan|Mid-American
+Eastern Washington|Big Sky
+Elon|Coastal
+Evansville|Missouri Valley
+Fairfield|Metro
+Fairleigh Dickinson|Northeast
+FIU|Conference USA
+Florida|Southeastern
+Florida A&M|Southwestern
+Florida Atlantic|American
+Florida Gulf Coast|Atlantic Sun
+Florida State|Atlantic Coast
+Fordham|Atlantic 10
+Fresno State|Pac-12
+Furman|Southern
+Gardner-Webb|Big South
+George Mason|Atlantic 10
+George Washington|Atlantic 10
+Georgetown|Big East
+Georgia|Southeastern
+Georgia Southern|Sun Belt
+Georgia State|Sun Belt
+Georgia Tech|Atlantic Coast
+Gonzaga|Pac-12
+Grambling State|Southwestern
+Grand Canyon|Mountain West
+Green Bay|Horizon League
+Hampton|Coastal
+Harvard|Ivy League
+Hawaii|Mountain West
+High Point|Big South
+Hofstra|Coastal
+Holy Cross|Patriot League
+Houston|Big 12
+Houston Christian|Southland
+Howard|Mid-Eastern
+Idaho|Big Sky
+Idaho State|Big Sky
+Illinois|Big Ten
+Illinois State|Missouri Valley
+Incarnate Word|Southland
+Indiana|Big Ten
+Indiana State|Missouri Valley
+Iona|Metro
+Iowa|Big Ten
+Iowa State|Big 12
+IU Indy|Horizon League
+Jackson State|Southwestern
+Jacksonville|Atlantic Sun
+Jacksonville State|Conference USA
+James Madison|Sun Belt
+Kansas|Big 12
+Kansas City|Summit League
+Kansas State|Big 12
+Kennesaw State|Conference USA
+Kent State|Mid-American
+Kentucky|Southeastern
+La Salle|Atlantic 10
+Lafayette|Patriot League
+Lamar|Southland
+Lehigh|Patriot League
+Le Moyne|Northeast
+Liberty|Conference USA
+Lindenwood|Ohio Valley
+Lipscomb|Atlantic Sun
+Little Rock|United Athletic
+LIU|Northeast
+Long Beach State|Big West
+Longwood|Big South
+Louisiana|Sun Belt
+Louisiana–Monroe|Sun Belt
+Louisiana Tech|Sun Belt
+Louisville|Atlantic Coast
+Loyola Chicago|Atlantic 10
+Loyola Maryland|Patriot League
+Loyola Marymount|West Coast
+LSU|Southeastern
+Maine|America East
+Manhattan|Metro
+Marist|Metro
+Marquette|Big East
+Marshall|Sun Belt
+Maryland|Big Ten
+Maryland Eastern Shore|Mid-Eastern
+McNeese|Southland
+Memphis|American
+Mercer|Southern
+Mercyhurst|Northeast
+Merrimack|Metro
+Miami (FL)|Atlantic Coast
+Miami (OH)|Mid-American
+Michigan|Big Ten
+Michigan State|Big Ten
+Middle Tennessee|Conference USA
+Milwaukee|Horizon League
+Minnesota|Big Ten
+Mississippi State|Southeastern
+Mississippi Valley State|Southwestern
+Missouri|Southeastern
+Missouri State|Conference USA
+Monmouth|Coastal
+Montana|Big Sky
+Montana State|Big Sky
+Morehead State|Ohio Valley
+Morgan State|Mid-Eastern
+Mount St. Mary's|Metro
+Murray State|Missouri Valley
+Navy|Patriot League
+NC State|Atlantic Coast
+Nebraska|Big Ten
+Nevada|Mountain West
+New Hampshire|America East
+New Haven|Northeast
+New Mexico|Mountain West
+New Mexico State|Conference USA
+New Orleans|Southland
+Niagara|Metro
+Nicholls|Southland
+NJIT|America East
+Norfolk State|Mid-Eastern
+North Alabama|United Athletic
+North Carolina|Atlantic Coast
+North Carolina A&T|Coastal
+North Carolina Central|Mid-Eastern
+North Dakota|Summit League
+North Dakota State|Summit League
+North Florida|Atlantic Sun
+North Texas|American
+Northeastern|Coastal
+Northern Arizona|Big Sky
+Northern Colorado|Big Sky
+Northern Illinois|Horizon League
+Northern Iowa|Missouri Valley
+Northern Kentucky|Horizon League
+Northwestern|Big Ten
+Northwestern State|Southland
+Notre Dame|Atlantic Coast
+Oakland|Horizon League
+Ohio|Mid-American
+Ohio State|Big Ten
+Oklahoma|Southeastern
+Oklahoma State|Big 12
+Old Dominion|Sun Belt
+Ole Miss|Southeastern
+Omaha|Summit League
+Oral Roberts|Summit League
+Oregon|Big Ten
+Oregon State|Pac-12
+Pacific|West Coast
+Penn|Ivy League
+Penn State|Big Ten
+Pepperdine|West Coast
+Pittsburgh|Atlantic Coast
+Portland|West Coast
+Portland State|Big Sky
+Prairie View A&M|Southwestern
+Presbyterian|Big South
+Princeton|Ivy League
+Providence|Big East
+Purdue|Big Ten
+Purdue Fort Wayne|Horizon League
+Queens|Atlantic Sun
+Quinnipiac|Metro
+Radford|Big South
+Rhode Island|Atlantic 10
+Rice|American
+Richmond|Atlantic 10
+Rider|Metro
+Robert Morris|Horizon League
+Rutgers|Big Ten
+Sacramento State|Big West
+Sacred Heart|Metro
+St. Bonaventure|Atlantic 10
+St. John's|Big East
+Saint Joseph's|Atlantic 10
+Saint Louis|Atlantic 10
+Saint Mary's|West Coast
+Saint Peter's|Metro
+St. Thomas|Summit League
+Sam Houston|Conference USA
+Samford|Southern
+San Diego|West Coast
+San Diego State|Pac-12
+San Francisco|West Coast
+San Jose State|Mountain West
+Santa Clara|West Coast
+Seattle|West Coast
+Seton Hall|Big East
+Siena|Metro
+SIU Edwardsville|Ohio Valley
+SMU|Atlantic Coast
+South Alabama|Sun Belt
+South Carolina|Southeastern
+South Carolina State|Mid-Eastern
+South Dakota|Summit League
+South Dakota State|Summit League
+South Florida|American
+Southeast Missouri State|Ohio Valley
+Southeastern Louisiana|Southland
+Southern|Southwestern
+Southern Illinois|Missouri Valley
+Southern Indiana|Ohio Valley
+Southern Miss|Sun Belt
+Southern Utah|Big Sky
+Stanford|Atlantic Coast
+Stephen F. Austin|Southland
+Stetson|Atlantic Sun
+Stonehill|Northeast
+Stony Brook|Coastal
+Syracuse|Atlantic Coast
+Tarleton State|United Athletic
+TCU|Big 12
+Temple|American
+Tennessee|Southeastern
+Tennessee State|Ohio Valley
+Tennessee Tech|Southern
+Texas|Southeastern
+Texas A&M|Southeastern
+Texas A&M–Corpus Christi|Southland
+Texas Southern|Southwestern
+Texas State|Pac-12
+Texas Tech|Big 12
+Toledo|Mid-American
+Towson|Coastal
+Troy|Sun Belt
+Tulane|American
+Tulsa|American
+UAB|American
+UC Davis|Mountain West
+UC Irvine|Big West
+UC Riverside|Big West
+UC San Diego|Big West
+UC Santa Barbara|Big West
+UCF|Big 12
+UCLA|Big Ten
+UConn|Big East
+UIC|Missouri Valley
+UMass|Mid-American
+UMass Lowell|America East
+UMBC|America East
+UNC Asheville|Big South
+UNC Greensboro|Southern
+UNC Wilmington|Coastal
+UNLV|Mountain West
+USC|Big Ten
+USC Upstate|Big South
+UT Arlington|United Athletic
+UT Martin|Ohio Valley
+UT Rio Grande Valley|Southland
+Utah|Big 12
+Utah State|Pac-12
+Utah Tech|Big Sky
+Utah Valley|Big West
+UTEP|Mountain West
+UTSA|American
+Valparaiso|Missouri Valley
+Vanderbilt|Southeastern
+VCU|Atlantic 10
+Vermont|America East
+Villanova|Big East
+Virginia|Atlantic Coast
+Virginia Tech|Atlantic Coast
+Wagner|Northeast
+Wake Forest|Atlantic Coast
+Washington|Big Ten
+Washington State|Pac-12
+Weber State|Big Sky
+West Florida|Atlantic Sun
+West Georgia|United Athletic
+West Virginia|Big 12
+Western Carolina|Southern
+Western Illinois|Ohio Valley
+Western Kentucky|Conference USA
+Western Michigan|Mid-American
+Wichita State|American
+William & Mary|Coastal
+Winthrop|Big South
+Wisconsin|Big Ten
+Wofford|Southern
+Wright State|Horizon League
+Wyoming|Mountain West
+Xavier|Big East
+Yale|Ivy League
+Youngstown State|Horizon League
