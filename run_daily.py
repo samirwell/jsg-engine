@@ -1,7 +1,8 @@
 """Daily JSG run for GitHub Actions: read Sheet -> run engine -> write Sheet -> email.
 
+Google auth: keyless Workload Identity Federation (workflow's google-github-actions/auth step), or
+  GOOGLE_SERVICE_ACCOUNT_JSON  JSON key of a service account with Editor access to the Sheet
 Env (GitHub secrets):
-  GOOGLE_SERVICE_ACCOUNT_JSON  full JSON key of a service account that has Editor access to the Sheet
   SMTP_USER                    Gmail address that sends the report (samir@jerseysportsgroup.com)
   SMTP_PASS                    Google app password for SMTP_USER
   REPORT_TO                    recipient (defaults to SMTP_USER)
@@ -23,8 +24,12 @@ WORK = os.path.join(HERE, 'run')
 def sheets():
     from google.oauth2 import service_account
     from googleapiclient.discovery import build
-    info = json.loads(os.environ['GOOGLE_SERVICE_ACCOUNT_JSON'])
-    creds = service_account.Credentials.from_service_account_info(info, scopes=['https://www.googleapis.com/auth/spreadsheets'])
+    import google.auth
+    scopes = ['https://www.googleapis.com/auth/spreadsheets']
+    if os.environ.get('GOOGLE_SERVICE_ACCOUNT_JSON'):
+        creds = service_account.Credentials.from_service_account_info(json.loads(os.environ['GOOGLE_SERVICE_ACCOUNT_JSON']), scopes=scopes)
+    else:  # keyless: Workload Identity Federation via google-github-actions/auth
+        creds, _ = google.auth.default(scopes=scopes)
     return build('sheets', 'v4', credentials=creds, cache_discovery=False).spreadsheets().values()
 
 
