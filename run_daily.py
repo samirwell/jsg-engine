@@ -44,8 +44,10 @@ def iso(v):
 
 
 def send(subject, html):
-    user = (os.environ.get('SMTP_USER') or '').strip()
-    pw = re.sub(r'\s', '', os.environ.get('SMTP_PASS') or '')  # app passwords are often copied with (non-breaking) spaces
+    raw_u, raw_p = os.environ.get('SMTP_USER') or '', os.environ.get('SMTP_PASS') or ''
+    clean = lambda v: re.sub(r'[^\x21-\x7e]', '', v)  # drop spaces, non-breaking spaces and any non-ASCII
+    user, pw = clean(raw_u), clean(raw_p)
+    print(f'[smtp] user len {len(raw_u)}->{len(user)} has@={"@" in user}; pass len {len(raw_p)}->{len(pw)}')
     to = os.environ.get('REPORT_TO') or user
     if DRY or not (user and pw):
         print(f'[email skipped] {subject}'); return
