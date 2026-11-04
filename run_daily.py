@@ -11,6 +11,7 @@ Optional: SHEET_ID (defaults to the JSG database), DRY_RUN=1 (no Sheet writes, n
 import datetime as dt, json, os, re, smtplib, subprocess, sys, traceback
 from email.mime.multipart import MIMEMultipart
 from email.mime.text import MIMEText
+from zoneinfo import ZoneInfo
 
 HERE = os.path.dirname(os.path.abspath(__file__))
 SHEET_ID = os.environ.get('SHEET_ID', '1hZP-C68txx08Ny4RQfi8xqMgrER74j7Hv-9kOOqTVtQ')
@@ -43,7 +44,8 @@ def iso(v):
 
 
 def send(subject, html):
-    user, pw = os.environ.get('SMTP_USER'), os.environ.get('SMTP_PASS')
+    user = (os.environ.get('SMTP_USER') or '').strip()
+    pw = re.sub(r'\s', '', os.environ.get('SMTP_PASS') or '')  # app passwords are often copied with (non-breaking) spaces
     to = os.environ.get('REPORT_TO') or user
     if DRY or not (user and pw):
         print(f'[email skipped] {subject}'); return
@@ -65,6 +67,13 @@ def main():
         if fn == 'log.json':
             vals = [[iso(r[0])] if r else [] for r in vals]
         json.dump({'range': rng, 'values': vals}, open(os.path.join(WORK, fn), 'w'))
+    # guard: never apply the same day twice (a manual re-run would duplicate FEED / RANK HISTORY rows)
+    today = dt.datetime.now(ZoneInfo('America/New_York')).date().isoformat()
+    last = (json.load(open(os.path.join(WORK, 'log.json'))).get('values') or [['']])[0]
+    if last and iso(last[0]) >= today and os.environ.get('FORCE') != '1':
+        send('JSG daily update - already ran today',
+             f'<p>The Sheet was already updated for {today}, so nothing was changed. Email delivery is working.</p>')
+        return
     # 2. engine
     subprocess.run([sys.executable, os.path.join(HERE, 'make_inputs.py'), WORK], check=True)
     subprocess.run([sys.executable, os.path.join(HERE, 'engine.py'), os.path.join(WORK, 'inputs.json')], check=True)
