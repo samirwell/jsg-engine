@@ -73,6 +73,8 @@ def main():
     today = dt.datetime.now(ZoneInfo('America/New_York')).date().isoformat()
     last = (json.load(open(os.path.join(WORK, 'log.json'))).get('values') or [['']])[0]
     if last and iso(last[0]) >= today and os.environ.get('FORCE') != '1':
+        if os.environ.get('GITHUB_EVENT_NAME') == 'schedule':
+            print('already ran today; backup schedule slot - nothing to do'); return
         send('JSG daily update - already ran today',
              f'<p>The Sheet was already updated for {today}, so nothing was changed. Email delivery is working.</p>')
         return

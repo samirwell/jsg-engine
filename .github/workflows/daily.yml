@@ -2,6 +2,8 @@ name: JSG daily update
 on:
   schedule:
     - cron: '24 12 * * *'   # 7:24 AM Eastern (EST); 8:24 AM during daylight time
+    - cron: '7 14 * * *'    # backup 9:07 AM EST - skips if the day already ran
+    - cron: '41 16 * * *'   # backup 11:41 AM EST - skips if the day already ran
   workflow_dispatch: {}      # "Run workflow" button for a manual run
 concurrency: jsg-daily
 jobs:
